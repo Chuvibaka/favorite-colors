@@ -1,6 +1,16 @@
 #include <iostream>
 #include "colors.h"
 
+Colors* Colors::instance = nullptr;
+Colors* Colors::getInstance()
+{
+	if (instance == nullptr)
+	{
+		instance = new Colors();
+	}
+	return instance;
+}
+
 void Colors::addColor(unsigned int favoriteColor)
 {
 	unsigned int processing = 1;

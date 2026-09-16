@@ -4,7 +4,7 @@
 
 int main()
 {
-	Colors colors;
+	Colors* colors = Colors::getInstance();
 
 	int colorInput = 0;
 	while (colorInput != -1)
@@ -18,7 +18,7 @@ int main()
 			printAddColorMenu();
 			unsigned int color = 0;
 			std::cin >> color;
-			colors.addColor(color);
+			colors->addColor(color);
 			break;
 		}
 		case 2:
@@ -26,13 +26,13 @@ int main()
 			printRemoveColorMenu();
 			unsigned int color = 0;
 			std::cin >> color;
-			colors.removeColor(color);
+			colors->removeColor(color);
 			break;
 		}
 
 		case 3:
 		{
-			colors.printColors();
+			colors->printColors();
 			break;
 		}
 		default:
