@@ -9,6 +9,9 @@ public:
 	void removeColor(unsigned int favoriteColor);
 	void printColors();
 
+	Colors(const Colors&) = delete;
+	Colors& operator=(const Colors&) = delete;
+
 private:
 	Colors() = default;
 
